@@ -1,44 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: aquamarine;
 }
 
-body::before {
-    z-index: -1;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(#f00, #f0f);
-    clip-path: circle(30% at right 70%);
+@media(max-width:980px) {
+    html {
+        font-size: 16px;
+    }
+    img {
+        min-width: 40vw;
+    }
 }
 
 body::after {
-    z-index: -1;
     content: "";
+    z-index: -1;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
+    clip-path: circle(20% at left 10%);
+    background: linear-gradient(#f00, #f0f);
     width: 100%;
     height: 100%;
-    background: linear-gradient(#2196f3, #e91e63);
-    clip-path: circle(20% at 10% 10%);
+    z-index: -1;
+}
+
+body::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    bottom: 1px;
+    right: 0px;
+    clip-path: circle(20% at right 80%);
+    background: linear-gradient(#9ecef5, #e91e63);
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    margin: auto;
+    width: fit-content;
+    z-index: 3;
+    height: fit-content;
+    backdrop-filter: blur(5px);
+    min-width: 40vmax;
+    min-height: 40vmax;
+}
+
+.card {
+    margin-top: 10vh;
+    border: 1px solid rgb(186, 185, 185);
+    box-shadow: 5px 5px 5px 5px rgb(139, 135, 135);
+    padding: 3em 3em;
 }
 
 h1 {
-    font-family: Karla;
-    font-size: 40px;
-    font-weight: 800;
-    line-height: 40px;
-    letter-spacing: -0.025em;
-    text-align: left;
-    font-family: Inter;
-    font-size: 40px;
-    font-weight: 800;
-    line-height: 40px;
-    letter-spacing: -0.025em;
-    text-align: left;
+    font-size: 3rem;
+    min-width: 5vmax;
+    min-height: 5vmax;
 }
 
 .h1g {
@@ -49,41 +71,17 @@ h1 {
     color: green;
 }
 
-.container {
-    margin: 10% 35%;
-    z-index: 3;
-    width: fit-content;
-}
-
-.card {
-    border: 2px solid white;
-    padding: 1.5em 1.5em;
-    box-shadow: 5px 5px 5px 5px rgb(139, 135, 135);
-    width: 100%;
-    backdrop-filter: blur(5px);
-}
-
 a {
     text-decoration: none;
     cursor: pointer;
-    border: 1px solid white;
-    margin-top: 50px;
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: left;
-    background-color: #10B981;
-    color: white;
-    height: 42px;
-    width: 160px;
-    left: 52px;
-    top: 284px;
-    border-radius: 6px;
-    padding: 9px 17px 9px 15px;
-}
-
-a:hover {
-    box-shadow: 2px 2px 2px 2px rgb(129, 126, 126);
+    border: 1px solid rgb(185, 184, 184);
+    color: green;
+    font-size: 1.5rem;
+    box-shadow: 2px 2px 2px 2px grey;
+    margin-top: 1rem;
+    padding: .5em .5em;
+    border-radius: 5px;
+    z-index: 3;
+    min-height: 2vmax;
+    min-width: 2vmax;
 }
