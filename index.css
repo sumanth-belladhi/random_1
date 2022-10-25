@@ -51,7 +51,7 @@ body::before {
 }
 
 .card {
-    margin: 6vmax;
+    margin: 6vmax 0px;
     border: 1px solid rgb(186, 185, 185);
     box-shadow: 5px 5px 5px 5px rgb(139, 135, 135);
     padding: 3em 3em;
