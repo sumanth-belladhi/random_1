@@ -33,14 +33,14 @@
       }
       
       h2 {
-          width: 100%;
           border: 1px solid #1F2937;
           background: rgba(255, 255, 255, 0.1);
           margin-right: 1vw;
           border-radius: 1rem;
-          font-size: 2vmax;
-          padding: .5em .5em;
+          font-size: 1.3vmax;
           color: green;
+          width: 12vmax;
+          padding: .5em .5em;
       }
       
       .get {
